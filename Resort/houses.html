@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html lang="EN">
+
+<head>
+  <title>Our houses</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name=" description content=" content" charset="UTF-8">
+  <link rel="stylesheet" href="./assets/css/houses.css">
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <script src="./assets/js/index.js"></script>
+
+</head>
+
+<body>
+  <nav class="navbar">
+    <label class="brand">
+      Tropical <br>Bay©
+    </label>
+    <!-- <img class="logo" src="./assets/img/logo.png" /> -->
+    <ul>
+      <li><a href="surf.html">Our surf school</a></li>
+      <li><a href="boats.html">Our boat rent</a></li>
+      <li><a href="houses.html">Our houses</a></li>
+      <li><a href="index.html"> About us</a></li>
+    </ul>
+
+  </nav>
+
+  <section class="housebanner">
+    <h1>Tropical resort houses</h1>
+  </section>
+
+  <section class="house">
+    <h2>O... Tropical resort bay offers unique stay</h2>
+    <p>Choose between beach cottage, surf house, house with pool, house for big groups, stylish house, appartment or
+      yacht</p>
+    <div class="carousel">
+      <div class="slideshow-container fade">
+
+        <!-- Full images with numbers and message Info -->
+        <div class="Containers">
+          <div class="MessageInfo">1 / 6</div>
+          <img src="./assets/img/houses/res1.jpg" alt="house" style="width:70%">
+          <div class="Info">Resort Accomodation</div>
+        </div>
+
+        <div class="Containers">
+          <div class="MessageInfo">2 / 6</div>
+          <img src="./assets/img/houses/res2.jpg" alt="house" style="width:70%">
+          <div class="Info">Own House</div>
+        </div>
+
+        <div class="Containers">
+          <div class="MessageInfo">3 / 6</div>
+          <img src="./assets/img/houses/res3.jpg" alt="house" style="width:70%">
+          <div class="Info">Yacht</div>
+        </div>
+        <div class="Containers">
+          <div class="MessageInfo">4 / 6</div>
+          <img src="./assets/img/houses/beach.jpg" alt="house" style="width:70%">
+          <div class="Info">Surf House</div>
+        </div>
+
+        <div class="Containers">
+          <div class="MessageInfo">5 / 6</div>
+          <img src="./assets/img/houses/beachcottage.jpg" alt="house" style="width:70%">
+          <div class="Info">Beach House</div>
+        </div>
+
+        <div class="Containers">
+          <div class="MessageInfo">6 / 6</div>
+          <img src="./assets/img/houses/yacht.jpg" alt="house" style="width:70%">
+          <div class="Info">Luxury Villa</div>
+        </div>
+        <!-- Back and forward buttons -->
+        <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+
+      <!-- The circles/dots -->
+      <div style="text-align:center">
+        <span class="dots" onclick="currentSlide(1)"></span>
+        <span class="dots" onclick="currentSlide(2)"></span>
+        <span class="dots" onclick="currentSlide(3)"></span>
+        <span class="dots" onclick="currentSlide(4)"></span>
+        <span class="dots" onclick="currentSlide(5)"></span>
+        <span class="dots" onclick="currentSlide(6)"></span>
+      </div>
+    </div>
+    <script>
+      var slidePosition = 1;
+      SlideShow(slidePosition);
+
+      // forward/Back controls
+      function plusSlides(n) {
+        SlideShow(slidePosition += n);
+      }
+
+      //  images controls
+      function currentSlide(n) {
+        SlideShow(slidePosition = n);
+      }
+
+      function SlideShow(n) {
+        var i;
+        var slides = document.getElementsByClassName("Containers");
+        var circles = document.getElementsByClassName("dots");
+        if (n > slides.length) {
+          slidePosition = 1
+        }
+        if (n < 1) {
+          slidePosition = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < circles.length; i++) {
+          circles[i].className = circles[i].className.replace(" enable", "");
+        }
+        slides[slidePosition - 1].style.display = "block";
+        circles[slidePosition - 1].className += " enable";
+      }
+    </script>
+  </section>
+
+  <section class="cottage">
+    <div class="sign-block">
+      <img class="" src="./assets/img/houses/beachcottage.jpg" alt="house"
+        style="width:90%; height:auto; float:right; max-width: 700px;" />
+    </div>
+
+    <div class="text-block">
+      <h2 class="h2-pd">Beach cottage</h2>
+      <p>Tropical bay resort is situated in the quiet southern part of the Tropical bay resort,Barbados close
+        to the Barbados Sands resort and 17 km from the capital.
+
+        It offers a large outdoor pool, and a spa area with an indoor pool.
+        A free parasol and sunbeds at the pool or the beach is provided.
+
+        Tropical bay resort is set in a picturesque woodland location, overlooking the beach.
+
+        Tropical bay resort features a main restaurant and a lobby bar.
+
+        Rent-a-car services and bike hire are provided.
+
+        The area offers several sport activities such as tennis and bicycles. The bus station, offering regular
+        transport to the capital, is set 100 m away. The centre of Tropical bay resort can be reached within a 15-minute
+        stroll.
+
+        <br> This is our guests' favourite part of Barbados, according to independent reviews.</p>
+
+    </div>
+  </section>
+
+  <section class="surfhouse">
+    <h2 class="h2-pd">Surf house on the beach</h2>
+
+    <div class="text-blockmiror">
+      <p>Situated on a private beach in north-west Barbados, Sea Symphony Villa offers a private pool, lush gardens and
+        a patio with sea views. It features a fully-equipped kitchen, plasma-screen TV and free Wi-Fi.
+
+        This open-plan villa has a spacious lounge and indoor and outdoor dining areas. Each air-conditioned bedroom has
+        an en suite bathroom, while the master suite includes a private balcony and walk-in wardrobe.</p>
+
+    </div>
+    <div class="sign-blockmiror">
+      <img class="" src="./assets/img/houses/beach3.jpg" alt="house"
+        style="width:90%; height:auto; float:left; max-width: 700px;" />
+    </div>
+
+  </section>
+
+  <section class="poolhouse">
+    <h2 class="h2-pd">House with own pool</h2>
+    <div class="sign-block">
+      <img class="" src="./assets/img/houses/ownpool.jpg" alt="house"
+        style="width:90%; height:auto; float:right; max-width: 700px;" />
+    </div>
+    <div class="text-block">
+
+      <p>Located on the white shores of Maxwell Beach, this tropical resort provides access to a variety of watersports,
+        massage services and dining options. It features a swim-up bar, 3 pools and a spa.
+
+        Bougainvillea Barbados offers bright, colourful rooms with a private balcony or terrace. A flat-screen cable TV,
+        fully equipped kitchen with granite countertops and Wi-Fi are included.
+
+        Calabash Cafe serves contemporary Caribbean dishes and offers frequent live entertainment.
+        Guests of Bougainvillea can relax in the pools and enjoy poolside bar service at one. A large games room,
+        fitness center and boutique are also open at the resort.</p>
+    </div>
+
+  </section>
+
+  <section class="partyhouse">
+    <h2 class="h2-pd">House for big groups of friends</h2>
+    <div class="text-blockmiror">
+      <p>Situated in Saint James, a few steps from Colony Club Beach, Colony Club by Elegant Hotels features
+        accommodation with a restaurant, free private parking, an outdoor swimming pool and a fitness centre. Among the
+        various facilities are a bar, a garden, as well as water sports facilities. The accommodation offers a 24-hour
+        front desk, room service and currency exchange for guests.
+
+        Free WiFi is accessible to all guests, while some rooms include a patio.
+
+        Guests at the hotel can enjoy a buffet breakfast.
+
+        Colony Club by Elegant Hotels offers a terrace. You can play tennis at the accommodation, and the area is
+        popular for snorkelling.</p>
+    </div>
+    <div class="sign-blockmiror">
+      <img class="sign" src="./assets/img/houses/villafriends.jpg" alt="house"
+        style="width:90%; height:auto; float:left; max-width: 700px;" />
+    </div>
+  </section>
+
+  <section class="luxuryhouse">
+    <h2 class="h2-pd">Stylish and luxurious villa house</h2>
+
+    <div class="sign-block">
+      <img class="sign" src="./assets/img/houses/luxvilla.jpg" alt="house"
+        style="width:90%; height:auto; float:right; max-width: 700px;" />
+    </div>
+    <div class="text-block">
+      <p>Enjoy your vacation with own butler, 24/7 service, own pool, sauna, massages and private chef</p>
+      <p>Situated on a private beach in north-west Barbados, Sea Symphony Villa offers a private pool, lush gardens
+        and a patio with sea views. It features a fully-equipped kitchen, plasma-screen TV and free Wi-Fi.
+        This open-plan villa has a spacious lounge and indoor and outdoor dining areas. Each air-conditioned bedroom
+        has an en suite bathroom, while the master suite includes a private balcony and walk-in wardrobe.
+        The villa’s staff includes a maid, laundress, chef and pool attendant. A masseuse is available on request.
+        Located on Fryers Well Bay, Sea Symphony Villa is just 3 km from Speightstown and a 30-minute drive from
+        Bridgetown. Guests enjoy free airport transfers and free on-site parking.</p>
+    </div>
+  </section>
+
+  <section class="apartment">
+    <h2 class="h2-pd">Apartment in the heart of the resort</h2>
+    <div class="text-blockmiror">
+
+      <p>Sugar Bay Barbados has a year-round outdoor pool and spa centre, and guests can enjoy a meal at the restaurant
+        or a drink at the bar. George Washington Museum is 10 minutes’ walk away.
+
+        Each room comes with a TV and elegant décor. All rooms are fitted with a private bathroom equipped with a bath
+        or shower.
+
+        You will find a 24-hour front desk, hairdresser's, and gift shop at the property. Water sports facilities and
+        car hire are available. You can engage in various activities, such as snorkeling and windsurfing.
+
+        Bridgetown is 3 km and St. Lawrence Gap is just 4.8 Km from the property. The nearest airport is Grantley Adams
+        Airport, 16 km from Sugar Bay Barbados.</p>
+    </div>
+    <div class="sign-blockmiror">
+      <img class="" src="./assets/img/houses/heartresort.jpg" alt="house"
+        style="width:90%; height:auto; float:left; max-width: 700px;" />
+    </div>
+  </section>
+
+  <section class="yacht">
+    <h2 class="h2-pd"> Yacht</h2>
+    <div class="sign-block">
+      <img class="" src="./assets/img/houses/yacht.jpg" alt="house"
+        style="width:90%; height:auto; float:right; max-width: 700px;" />
+    </div>
+    <div class="text-block">
+      <p>Enjoy the sea with private crew, champagne in a luxurious yacht. <br> Snorkelling is possible above an
+        expansive reef, which is just offshore. Harrison’s Cave and its beautiful rock formations are a 20-minute drive
+        away. <br>The Caribbean is rightly referred to as a yachting paradise. There is no better way to experience an
+        unsurpassed taste of freedom, elegance and style than on a luxury yacht, and perhaps no other destination in the
+        world that can offer the wide range of beaches, gorgeous islands, fishing, diving / snorkeling, clear water, and
+        supreme sailing conditions than the islands of the Caribbean. All of these ingredients make for the perfect
+        excursion to key destinations <br> you have the ultimate privacy with control and freedom. You and your guest will be the only company aboard the luxury boat charter and the only ones the crew will be paying attention to. Make your next daytime or evening event unforgettable by dining with or entertaining your guests while cruising </p>
+    </div>
+  </section>
+
+  <footer class="sait-footer">
+
+    <div class="block">
+      <p>Tropical Bay Resort &copy; Privacy Policy</p>
+    </div>
+
+    <div class="block">
+      <p> Call Us For Free: (012) 123-456-7890, Barbados, Sea str 3575 </p>
+    </div>
+
+    <div class="block">
+      <ul>
+        <li><img src="./assets/img/goog.png" alt="google icon" /></li>
+        <li><img src="./assets/img/pin.png" alt="pinterest icon"></li>
+        <li><img src="./assets/img/twi.png" alt="twitter icon"></li>
+        <li><img src="./assets/img/fb.png" alt="facebook icon"></li>
+        <li><img src="./assets/img/inst.png" alt="instagram icon"></li>
+      </ul>
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>

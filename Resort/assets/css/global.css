@@ -1,0 +1,157 @@
+body{
+    margin: 0;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+h1 {
+    color: white;
+    padding: 80px; /* some padding */
+    text-align: center; /* center the text */
+    font-size: 55px;
+    font-family: 'Henny Penny', cursive;
+    text-shadow: 3px 3px 3px gray;
+}
+.h2-pd {
+  margin-bottom:50px;
+}
+h2 {
+  color: #fff;
+  padding: -15px;
+  margin: -15px;
+  text-align: center; /* center the text */
+  font-size: 55px;
+  font-family: 'Henny Penny', cursive;
+  text-shadow: 3px 3px 3px gray;
+}
+
+
+.navbar {
+  overflow: hidden;
+  position:fixed;
+  top:0;
+  width: 100%;
+  height: 55px;
+  left:0;
+  z-index: 100px;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar li {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px; 
+  float: right;
+}
+
+
+.navbar .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar li:not(:first-child) {display: none;}
+  .navbar li.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* navbar styles */
+
+.brand {
+  color: white;
+  font-size: 15px;
+  font-family: 'Henny Penny', cursive;
+  text-shadow: 3px 3px 3px #8fce00;
+  text-align: center;
+}
+/* 
+.navbar {
+    position:fixed;
+    top:0;
+    width: 100%;
+    height: 55px;
+    left:0;
+    z-index: 100px;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+}*/
+ ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+  }
+  
+  li {
+    float: right;
+  } 
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #81b0c6;
+    color:white;
+  } 
+
+  label {
+    position: absolute;
+    top: 10px;
+    left: 2%;
+    color: #999;
+    font-size: clamp(14px, 1.5vw, 18px);
+    pointer-events: none;
+    user-select: none;
+  }
+
+  /* NAVBAR END */
+
+/* footer styles */
+
+.sait-footer {
+    height: 100px;
+    background-color: #ffff33;
+    margin: 0px;
+    text-align: center;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+  }
+  
+  .block img {
+    
+    margin: 10px;
+   
+  }
